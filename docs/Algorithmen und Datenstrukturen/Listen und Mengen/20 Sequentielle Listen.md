@@ -46,7 +46,7 @@ Der best case tritt ein, wenn ein Element am Ende angefügt werden muss. --> kon
 ### Entfernen aus sequentieller Liste (bei Beibehaltung der Reihenfolge)
 
 - Element löschen, indem alle nachfolgenden Element um 1 nach vorn gerückt werden
-- FirstFreeIndex aktualisieren
+- ```FirstFreeIndex``` aktualisieren
 
 #### Zeitaufwand
 Worst-case: $O(n)$
