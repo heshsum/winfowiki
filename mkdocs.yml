@@ -3,11 +3,17 @@ site_name: WinfoWiki
 theme:
     name: readthedocs
 
+extra_javascript:
+    - https://polyfill.io/v3/polyfill.min.js?features=es6
+    - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+
 markdown_extensions:
     - smarty
     - toc:
         permalink: True
     - sane_lists
+    - pymdownx.arithmatex:
+        generic: true
 
 plugins:
     - search
