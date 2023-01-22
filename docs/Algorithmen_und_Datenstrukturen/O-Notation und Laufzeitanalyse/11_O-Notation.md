@@ -23,7 +23,7 @@ Man ist nicht nur an irgendeiner oberen Schranke interessiert, sondern diese sol
 
 Dazu eignet sich folgendes Vorgehen:
 1. Streiche alle Konstanten weg
-2. Nehme den Term mit dem größten Wachstum (da dieser langfristig das Wachstum von Laufzeit/Ressourcen dominiert, siehe [Laufzeitanalyse Grundlagen](10 Laufzeitanalyse Grundlagen.md)).
+2. Nehme den Term mit dem größten Wachstum (da dieser langfristig das Wachstum von Laufzeit/Ressourcen dominiert, siehe [Laufzeitanalyse Grundlagen](10_Laufzeitanalyse-Grundlagen.md)).
 
 ### Beispiel Bestimmung der scharfen Schranke
 1. Ausgangsgleichung:  
