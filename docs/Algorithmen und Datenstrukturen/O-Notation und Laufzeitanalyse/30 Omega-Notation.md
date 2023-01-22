@@ -1,4 +1,4 @@
-# Ω-Notation - Best-Case-Laufzeit
+# Omega-Notation - Best-Case-Laufzeit
 Während die O-Notation den Worst-Case und die Theta-Notation den Average-Case zeigt, wird mithilfe der Omega-Notation die Best-Case-Laufzeit abegschätzt.
 
 # Definition
