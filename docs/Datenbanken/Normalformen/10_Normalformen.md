@@ -17,4 +17,4 @@ Die dritte Normalform besagt, dass
 - jedes Nichtschlüsselattribut nicht transitiv vom Primärschlüssel abhängig ist, d.h. **aus keinem Nichtschlüsselattribut folgt ein anderes Nichtschlüsselattribut**
 
 ## Siehe auch
-https://www.tinohempel.de/info/info/datenbank/normalisierung.htm
+[tinohempel.de](https://www.tinohempel.de/info/info/datenbank/normalisierung.htm)
