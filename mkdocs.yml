@@ -3,6 +3,8 @@ site_name: WinfoWiki
 theme:
     name: material
     language: de
+    features:
+        - navigation.instant
 
 extra_javascript:
     - https://polyfill.io/v3/polyfill.min.js?features=es6
@@ -17,5 +19,8 @@ markdown_extensions:
         generic: true
 
 plugins:
-    - search
     - mermaid2
+    - search:
+        lang:
+          - de
+          - en
