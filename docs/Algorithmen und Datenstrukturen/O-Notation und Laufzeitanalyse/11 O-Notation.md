@@ -47,7 +47,7 @@ $f(n) = \cancel4 n^2 + \cancel{100}n^3$
 3. Nehme den Term mit dem größten Wachstum:  
 $f(n) = n^3$  
 4. Ergebnis:  
-$f(n) ∈ O(n^3)$  
+$f(n) ∈ O(n^3)$
 
 ## Weiterführende Links
 [Khan Academy](https://de.khanacademy.org/computing/computer-science/algorithms/asymptotic-notation/a/big-o-notation)

@@ -54,8 +54,6 @@ Informationen dienen dazu, die Entscheidungsfindung im Unternehmen zu unterstüt
 ## Informationsgehalt
 Es kann zwischen vollkommenen und unvollkommenen Informationen unterschieden werden.
 
-##
-
 ## Zweckorientierte Klassifizierung
 ### Planungsinformationen
 - notwendig zur Planung von Zielen
@@ -95,7 +93,7 @@ flowchart TD;
 - dienen der Kontrolle der Realisierung
 - bei Abweichungen zwischen Entscheidung und Realisierung beinhalten sie Informationen zur Revision
 
-## Modalität von Informationne
+## Modalität von Informationen
 - faktische Informationen
 - prognostische Informationen
 - explanatorische Informationen
