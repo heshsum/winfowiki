@@ -18,6 +18,10 @@ markdown_extensions:
     - pymdownx.arithmatex:
         generic: true
     - tables
+    - attr_list
+    - admonition
+    - pymdownx.details
+    - pymdownx.superfences
 
 plugins:
     - mermaid2
