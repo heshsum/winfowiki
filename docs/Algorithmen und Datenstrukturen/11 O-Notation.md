@@ -1,4 +1,4 @@
-# O-Notation
+# O-Notation - Worst-Case-Laufzeit
 Die O-Notation ist eine Abschätzung der Laufzeit eines Algorithmus bei unendlich großen Eingabegrößen.  
 Mit der O-Notation wird die (theoretische) qualitative obere Schranke für die Laufzeit eines Algorithmus angegeben.
 
