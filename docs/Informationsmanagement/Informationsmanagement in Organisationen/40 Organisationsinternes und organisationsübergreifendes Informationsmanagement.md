@@ -1,5 +1,6 @@
 # Organisationsinternes und organisationsübergreifendes Informationsmanagement
-Die Entwicklung von Systemen hat zum Ziel die Bedürfnisse unterschiedlicher Stakeholder zu befriedigen. Deren Anforderungen, Wünsche und Bedürfnisse können sehr unterschiedlich sein, teilweise sogar widersprüchlich.
+Die Entwicklung von Systemen hat zum Ziel, die Bedürfnisse unterschiedlicher Stakeholder zu befriedigen. Deren Anforderungen, Wünsche und Bedürfnisse können sehr unterschiedlich sein, teilweise sogar widersprüchlich
+
 Eine erfolgreiche Unternehmensführung muss zwingend die Interessen aller Anspruchsgruppen bei ihren Entscheidungen berücksichtigen (Social Responsiveness).
 
 ## Stakeholderanalyse
