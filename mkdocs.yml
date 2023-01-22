@@ -29,3 +29,5 @@ plugins:
         lang:
           - de
           - en
+
+repo_url: https://github.com/heshsum/winfowiki
