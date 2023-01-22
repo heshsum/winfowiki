@@ -1,4 +1,4 @@
-# 3.3 Betriebliche Informations- und Kommunikationssysteme
+# Betriebliche Informations- und Kommunikationssysteme
 Ein betriebliches Informationssystem dient dazu, den betrieblichen Funktionen Daten effizient zur Verfügung zu stellen, sodass die Daten zur Wertschöpfung beitragen können.
 
 Wenn ein Informationssystem (fast) alle Bereiche der Wertschöpfungskette eines Unternehmens betrifft, spricht man von einem ERP-System.
