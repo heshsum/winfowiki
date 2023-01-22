@@ -9,6 +9,7 @@ Erklärung der Grundbegriffe
 > Diese Inputs werden auch als **Produktionsfaktoren** bezeichnet.
 
 Bei der Beschaffung gibt es zwei Ausnahmen:
+
 1. Mitarbeiter --> siehe Personalwirtschaft
 2. Maschinen --> siehe Investitionsrechnung
 
