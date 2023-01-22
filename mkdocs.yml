@@ -5,6 +5,7 @@ theme:
     language: de
     features:
         - navigation.instant
+        - content.code.copy
 
 extra_javascript:
     - https://polyfill.io/v3/polyfill.min.js?features=es6
@@ -15,12 +16,16 @@ markdown_extensions:
     - toc:
         permalink: "#"
     - sane_lists
-    - pymdownx.arithmatex:
-        generic: true
     - tables
     - attr_list
     - admonition
+    - pymdownx.arithmatex:
+          generic: true
     - pymdownx.details
+    - pymdownx.highlight:
+        anchor_linenums: true
+    - pymdownx.inlinehilite
+    - pymdownx.snippets
     - pymdownx.superfences:
           custom_fences:
               - name: mermaid
