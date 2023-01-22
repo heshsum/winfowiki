@@ -10,7 +10,7 @@ extra_javascript:
 markdown_extensions:
     - smarty
     - toc:
-        permalink: True
+        permalink: "#"
     - sane_lists
     - pymdownx.arithmatex:
         generic: true
