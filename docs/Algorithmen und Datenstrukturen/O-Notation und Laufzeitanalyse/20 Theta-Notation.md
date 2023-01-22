@@ -8,5 +8,5 @@ Ab $n_0$ muss die Laufzeit des Algorithmus innerhalb der Bänder $k_1$ und $k_2$
 
 Dann gilt: $k_1(n) < Θ(n) < k_2(n)$
 
-# Weiterführende Links
+## Weiterführende Links
 [Khan Academy](https://de.khanacademy.org/computing/computer-science/algorithms/asymptotic-notation/a/big-big-theta-notation)

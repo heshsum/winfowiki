@@ -1,8 +1,8 @@
 # Sequentielle Liste
-## Bsp. Array
+## Sequentielle Liste am Beispiel Array
  > Die Realsierung einer Liste durch ein Array nennt man **sequentielle Liste**
 
- Annahmen:
+### Annahmen:
 
  - Werte sind alle unmittelbar hintereinander abgelegt (keine Lücken)
  - beim Löschen von Werten rückend ie nachfolgenden Werte auf

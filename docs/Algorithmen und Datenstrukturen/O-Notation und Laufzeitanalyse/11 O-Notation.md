@@ -18,14 +18,14 @@ Die Bezugsgröße der *qualitativen* oberen Schranke abstrahiert somit die Perfo
 > Das bedeutet:  
 > $f(n) ∈ O (g(n))$, wenn $f$ <u>nicht schneller</u> wächst als $g$.
 
-# Bestimmung einer möglichst einfachen scharfen oberen Schranke
+## Bestimmung einer möglichst einfachen scharfen oberen Schranke
 Man ist nicht nur an irgendeiner oberen Schranke interessiert, sondern diese sollte möglichst scharf (d.h. möglichst klein) sein.
 
 Dazu eignet sich folgendes Vorgehen:
 1. Streiche alle Konstanten weg
 2. Nehme den Term mit dem größten Wachstum (da dieser langfristig das Wachstum von Laufzeit/Ressourcen dominiert, siehe [Laufzeitanalyse Grundlagen](10 Laufzeitanalyse Grundlagen.md)).
 
-## Beispiel Bestimmung der scharfen Schranke
+### Beispiel Bestimmung der scharfen Schranke
 1. Ausgangsgleichung:  
 $f(n) = 3n^2 +  7n ⋅ log_n + 100$  
 2. Streiche alle Konstanten weg:  
@@ -39,7 +39,7 @@ $f(n) = n^2 + \cancel{n ⋅ log_n}$
 5. Ergebnis:  
 $f(n) ∈ O(n^2)$  
 
-## Beispiel 2
+### Beispiel 2
 1. Ausgangsgleichung:  
 $f(n) = 4n^2 + 100n^3$  
 2. Streichung der Konstanten:  
@@ -49,5 +49,5 @@ $f(n) = n^3$
 4. Ergebnis:  
 $f(n) ∈ O(n^3)$  
 
-# Weiterführende Links
+## Weiterführende Links
 [Khan Academy](https://de.khanacademy.org/computing/computer-science/algorithms/asymptotic-notation/a/big-o-notation)

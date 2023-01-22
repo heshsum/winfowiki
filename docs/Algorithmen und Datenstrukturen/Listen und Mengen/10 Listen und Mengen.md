@@ -7,21 +7,21 @@
 > Ein **abtrakter Datentyp** ist ein Datentyp, der ausschließlich über seine Operationen definiert wird.
 > Die innere Repräsentation der Daten und die Realsiierung der Operationen sind jedoch verkapselt, d.h. nach außen nicht sichtbar. 
 
-# Abstrakter Datentyp Sammlung
+## Abstrakter Datentyp Sammlung
 - Bei den meisten praktischen Anwendungen handelt es sich um eine Sammlung von Daten
 
-## Sammlung und ihre Operationen
-### Bsp. Verwaltung von Studierendendatensätzen
+### Sammlung und ihre Operationen
+#### Bsp. Verwaltung von Studierendendatensätzen
 - Einfügen
 - Entfernen
 - Suchen
 - Ändern
 - Iteration durch alle Elemente einer Sammlung
 
-### Sortierte und unsortierte Sammlungen
+#### Sortierte und unsortierte Sammlungen
 Sammlungen können sortiert und unsortiert vorliegen.
 
-# Listen
+## Listen
 > Eine Liste ist eine **Folge von Elementen**, die in einer Reihenfolge vorliegen.
 
 Daraus, dass es sich um Elemente in einer bestimmten Reihenfolge handelt, ergeben sich weitere Operationen:
@@ -30,7 +30,7 @@ Daraus, dass es sich um Elemente in einer bestimmten Reihenfolge handelt, ergebe
 - Entfernen an einer bestimmten Position/Index
 
 
-# Mengen
+## Mengen
 > Eine Menge ist eine ungeordnete Sammlung von Werten mit der Eigenschaft, dass kein Wert mehrfach vorkommt
 
 Zusätzliche Operationen sind die Vereinigung oder der Durchschnitt von Mengen
