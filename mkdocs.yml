@@ -1,0 +1,14 @@
+site_name: WinfoWiki
+
+theme:
+    name: readthedocs
+
+markdown_extensions:
+    - smarty
+    - toc:
+        permalink: True
+    - sane_lists
+
+plugins:
+    - search
+    - mermaid2
