@@ -49,8 +49,5 @@ $f(n) = n^3$
 4. Ergebnis:  
 $f(n) ∈ O(n^3)$  
 
-# Wachstumstabelle
-Als Hilfestellung hier eine Tabelle mit Wachstumsraten verschiedener Funktionen:
-
 # Weiterführende Links
 [Khan Academy](https://de.khanacademy.org/computing/computer-science/algorithms/asymptotic-notation/a/big-o-notation)
