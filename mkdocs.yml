@@ -2,6 +2,7 @@ site_name: WinfoWiki
 
 theme:
     name: material
+    language: de
 
 extra_javascript:
     - https://polyfill.io/v3/polyfill.min.js?features=es6
