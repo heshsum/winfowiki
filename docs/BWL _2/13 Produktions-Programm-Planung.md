@@ -7,7 +7,7 @@ Die strategisch-taktische Produktionsplanung dient der Festlegung des Produktpro
 - Sicherstellung der Produktvielfalt
 - durch Flexibilität im Produktionsbereich
 - bei zugleich hoher Qualität der Produkte
-- unter Berücksichtigung des Kostenaspekts (Vgl. dazu auch Kap. 1.1.4)
+- unter Berücksichtigung des Kostenaspekts
 
 ### Planung von Normstrategien
 - Festlegung der Flexibilität in der Produktion
