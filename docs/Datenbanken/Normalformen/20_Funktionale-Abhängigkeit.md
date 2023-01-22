@@ -1,6 +1,5 @@
 # Funktionale Abhängigkeit
 Eine funktionale Abhängigkeit bedeutet, dass ein Attribut von einem anderen abhängig ist:
-
 > *Aus X folgt Y:* $x \rightarrow y$
 
 ## Partielle funktionale Abhängigkeit
