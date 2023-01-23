@@ -6,28 +6,12 @@ Die Informationsorientierung umfasst Forschungs- und Messmethoden, mit denen der
 Marchand et al. haben in ihren Forschungen gezeigt, dass Information Orientation sehr wohl einen messbaren Einfluss auf den Geschäftserfolg haben kann.  
 Entscheidend ist dabei, dass die eingesetzten Funktionen und Fähigkeiten nicht isoliert betrachtet werden dürfen. Es kommt vielmehr auf das Zusammenwirken der einzelnen Komponenten „Mensch“ (und dessen Qualifikation), „Technik“ (und deren Funktionsfähigkeit), „Organisation“ (und deren Prozesse) und „Kommunikation“ (und deren Medien) an.
 
-Die Informationsorientierung besteht aus drei Dimensionen:
+Informationsorientierung besteht aus drei Dimensionen:
+1. Information Behaviors and Values Capability
+2. Information Management Practices Capability
+3. Information Technology Practices Capability
 
-- [Informationsorientierung](#informationsorientierung)
-  - [Information Behaviors and Values Capability](#information-behaviors-and-values-capability)
-    - [Proaktivität](#proaktivität)
-    - [Integrität](#integrität)
-    - [Formalisierung](#formalisierung)
-    - [Kontrolle](#kontrolle)
-    - [Transparenz](#transparenz)
-    - [Wechselseitiger Zugang](#wechselseitiger-zugang)
-  - [Information Management Practices Capability](#information-management-practices-capability)
-      - [Phase Null - Sensing](#phase-null---sensing)
-      - [Phase Eins - Collecting](#phase-eins---collecting)
-      - [Phase Zwei - Organizing](#phase-zwei---organizing)
-      - [Phase Drei - Processing](#phase-drei---processing)
-      - [Phase Vier - Maintaining](#phase-vier---maintaining)
-  - [Information Technology Practices Capability](#information-technology-practices-capability)
-      - [1. Unterstützung operationaler Tätigkeiten durch IT / IT for Operational Support](#1-unterstützung-operationaler-tätigkeiten-durch-it--it-for-operational-support)
-      - [2. Geschäftsprozessunterstützung durch IT / IT for Business Support](#2-geschäftsprozessunterstützung-durch-it--it-for-business-support)
-      - [3. Unterstützung von Innovation durch IT / IT for Innovation Support](#3-unterstützung-von-innovation-durch-it--it-for-innovation-support)
-      - [4. Unterstützung von Managementtätigkeiten durch IT / IT for Managerial Support](#4-unterstützung-von-managementtätigkeiten-durch-it--it-for-managerial-support)
-  - [Messindikatoren für die Verbesserung des Geschäftserfolgs](#messindikatoren-für-die-verbesserung-des-geschäftserfolgs)
+Hinzu kommen noch Messindikatoren für die Verbesserung des Geschäftserfolgs
 
 ```mermaid
 graph TD;
@@ -40,7 +24,17 @@ graph TD;
     b5(Transparenz)
     b6("Wechselseitiger Zugang")
     c("Information Management Practices Capability")
+    c1(Phase Null - Sensing)
+    c2(Phase Eins - Collecting)
+    c3(Phase Zwei - Organizing)
+    c4(Phase Drei - Processing)
+    c5(Phase Vier - Maintaining)
     d("Information Technology Practices Capability")
+    d1(IT for Operational Support)
+    d2(IT for Business Support)
+    d3(IT for Innovation Support)
+    d4(IT for Managerial Support)
+
     a --- b
     b --- b1
     b1 --- b2
@@ -49,7 +43,16 @@ graph TD;
     b4 --- b5
     b5 --- b6
     a --- c
+    c --- c1
+    c1 --- c2
+    c2 --- c3
+    c3 --- c4
+    c4 --- c5
     a --- d
+    d --- d1
+    d1 --- d2
+    d2 --- d3
+    d3 --- d4
 ```
 
 
