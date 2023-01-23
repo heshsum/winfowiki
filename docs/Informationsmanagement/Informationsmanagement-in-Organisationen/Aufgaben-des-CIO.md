@@ -4,12 +4,12 @@ Es fehlt nach wie vor ein klares Berufsbild für Informationsmanager. Trotzdem h
 Zu den Aufgaben eines Information Officer gehören:
 
 - Optimierung interner Funktionen wie
-  - Beschaffung
-  - Produktionsplanung
-  - Marketing
+    - Beschaffung
+    - Produktionsplanung
+    - Marketing
 - Verbesserung der Wettbewerbssituation für das Unternehmen durch Beschleunigung/Vereinfachung von Informationsflüsse zu 
-  - Kunden
-  - Lieferanten
+    - Kunden
+    - Lieferanten
 - Förderung der Effizienz der Mitarbeiter durch eine optimale Mischung von zentraler und dezentraler Rechnerkapazität
 - Entwurf und Realisierung der Computer- und Telekommunikations-Architektur
 - Ökonomische Verwaltung des zentralen Rechenzentrums
