@@ -1,7 +1,7 @@
 # Sichtweisen auf Informationen
 Es gibt unterschiedliche Sichtweisen auf den Informationsbegriff. Hier werden einige der Sichtweisen dargestellt.
 
-## naturwissenschaftliche Sichtweise
+## Naturwissenschaftliche Sichtweise
 Informatisches Grundgesetz:
 > Information ist Information, weder Materie noch Energie
 
