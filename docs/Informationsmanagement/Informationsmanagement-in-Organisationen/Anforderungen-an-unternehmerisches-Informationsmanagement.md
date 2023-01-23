@@ -4,8 +4,6 @@ Das Informationsmanagement ist zunehmend wichtiger für Unternehmen. Daraus erge
 ## Operative und strategische Führungssysteme
 > Informationssysteme, die Führungskräfte unterstützen, werden als **Planungs- und Kontrollsysteme** oder als **Management Support Systems (MSS)** bezeichnet.
 
-
-
 Diese Systeme lassen sich in vier Unterkategorien unterteilen, die sich danach unterscheiden, ob sie die Vergangenheit bzw. Zukunft betrachten oder der Präsentation von Informationen bzw. der Analys/Prognose von Sachverhalten dienen.
 
 ### Management Information Systems (MIS) / Managementinformationssysteme (MIS)
