@@ -27,7 +27,7 @@ EIS Systeme sind Informationssysteme, über die das Management Daten interaktiv 
 - Zeitliche Betrachtung: hauptsächlich Vergangenheit, aber auch Zukunft
 
 ### Executive Support Systems (ESS) / Führungsunterstützungssystem (FUS)
-FUS sind die Kombination aus [DSS](10_Anforderungen-an-unternehmerisches-Informationsmanagement.md#decision-executive-systems-des--entscheidungsunterstützungssysteme-eus) und [EIS](10_Anforderungen-an-unternehmerisches-Informationsmanagement.md#executive-information-systems-eis--führungsinformationssysteme-fis).
+FUS sind die Kombination aus [DSS](Anforderungen-an-unternehmerisches-Informationsmanagement.md#decision-executive-systems-des--entscheidungsunterstützungssysteme-eus) und [EIS](Anforderungen-an-unternehmerisches-Informationsmanagement.md#executive-information-systems-eis--führungsinformationssysteme-fis).
 
 - Zweck: Präsentation von Informationen **und** Analys/ Prognose
 -  Zeitliche Betrachtung: Vergangenheit - Zukunft
