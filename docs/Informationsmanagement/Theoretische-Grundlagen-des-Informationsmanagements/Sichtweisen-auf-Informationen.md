@@ -1,4 +1,4 @@
-# Sichtweisen auf Informationen
+# Sichtweisen auf Informationssysteme
 Es gibt unterschiedliche Sichtweisen auf den Informationsbegriff. Hier werden einige der Sichtweisen dargestellt.
 
 ## Naturwissenschaftliche Sichtweise
