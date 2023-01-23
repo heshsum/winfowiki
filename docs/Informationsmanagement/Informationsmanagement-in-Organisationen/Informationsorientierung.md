@@ -7,6 +7,7 @@ Marchand et al. haben in ihren Forschungen gezeigt, dass Information Orientation
 Entscheidend ist dabei, dass die eingesetzten Funktionen und Fähigkeiten nicht isoliert betrachtet werden dürfen. Es kommt vielmehr auf das Zusammenwirken der einzelnen Komponenten „Mensch“ (und dessen Qualifikation), „Technik“ (und deren Funktionsfähigkeit), „Organisation“ (und deren Prozesse) und „Kommunikation“ (und deren Medien) an.
 
 Informationsorientierung besteht aus drei Dimensionen:
+
 1. Information Behaviors and Values Capability
 2. Information Management Practices Capability
 3. Information Technology Practices Capability
