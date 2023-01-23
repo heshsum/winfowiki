@@ -1,5 +1,6 @@
 nav:
     - index.md
+    - Setup.md
     - Methoden.md
     - Schleifen.md
     - ...
