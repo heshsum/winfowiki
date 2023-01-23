@@ -35,6 +35,7 @@ markdown_extensions:
 
 plugins:
     - mermaid2
+    - awesome-pages
     - search:
         lang:
           - de
