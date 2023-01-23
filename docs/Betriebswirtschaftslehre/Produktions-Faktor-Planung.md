@@ -1,5 +1,5 @@
 # Produktions-Faktor-Planung
-Die Produktions-Faktor-Planung legt fest, womit die Güter und Dienstleistungen (die in der [Produktions-Programm-Planung](13%20Produktions-Programm-Planung.md) festgelegt werden) produziert wird.
+Die Produktions-Faktor-Planung legt fest, womit die Güter und Dienstleistungen (die in der [Produktions-Programm-Planung](Produktions-Programm-Planung.md) festgelegt werden) produziert wird.
 
 # Strategisch-taktische Produktions-Faktor-Planung
 Die strategisch-taktische Produktions-Faktor-Planung liefert die Rahmenbedingungen für die Beschaffung --> Grundsatzentscheidungen für längerfristig eingesetzte Produktionsfaktoren
@@ -19,4 +19,4 @@ Dazu gehören:
 	- Eigenerzeugung von Energie vs. Fremdbezug
 	- Auswahl des Energieträgers
 
-Für die Produktions-Faktor-Planung ist auch ein tieferes Verständnis von [Produktionsprozessen](15%20Produktions-Prozess-Planung.md) notwendig.
+Für die Produktions-Faktor-Planung ist auch ein tieferes Verständnis von [Produktionsprozessen](Produktions-Prozess-Planung.md) notwendig.
