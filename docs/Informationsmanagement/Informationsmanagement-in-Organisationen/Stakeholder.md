@@ -1,4 +1,4 @@
-# Organisationsinternes und organisationsübergreifendes Informationsmanagement
+# Stakeholder
 Die Entwicklung von Systemen hat zum Ziel, die Bedürfnisse unterschiedlicher Stakeholder zu befriedigen. Deren Anforderungen, Wünsche und Bedürfnisse können sehr unterschiedlich sein, teilweise sogar widersprüchlich
 
 Eine erfolgreiche Unternehmensführung muss zwingend die Interessen aller Anspruchsgruppen bei ihren Entscheidungen berücksichtigen (Social Responsiveness).
@@ -50,4 +50,7 @@ Stakeholder lassen sich auch anhand ihres Grades der Mitwirkung im Unternehmen e
 	- Familienmitglieder der Mitarbeiter
 	- Anwohner am Bauprojekt
 
+## Konfliktpotenzial
+Verschiedene Stakeholder vertreten unterschiedliche Interessen. Je nach Einfluss und Wirkungsgrad können sie dabei unterschiedlich stark auf Strategie und Praxis beim Informationsmanagement einwirken.
 
+Die IT-Abteilung hat nun zur Aufgabe, zwischen diesen unterschiedlichen Stakeholdern vermitteln zu müssen.
