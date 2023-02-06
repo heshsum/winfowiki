@@ -2,6 +2,7 @@ site_name: WinfoWiki
 
 theme:
     name: material
+    custom_dir: overrides
     language: de
     features:
         - navigation.instant
