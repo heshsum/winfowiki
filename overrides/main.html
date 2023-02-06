@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+
+{% block analytics %}
+{{ super() }}
+<script>
+    window.td = window.td || [];
+    td.push(['app', '1B4068BA-0CD1-4D99-9296-8D95AD4DA309'], ['user', 'anonymous'], ['signal']);
+</script>
+{% endblock %}
