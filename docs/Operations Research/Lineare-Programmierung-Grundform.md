@@ -17,12 +17,18 @@ $x_1, x_2, ..., x_n ≥ 0$
 - $x_1, x_2$, etc sind Strukturvariablen
 
 ## Bedingungen
-- Die Strukturvariablen müssen linear sein --> "lineare Programmierung"
-- Die Grundform gilt nur für Maximierungen, nicht für Minimierungen
-- Restriktionen sind immer ≤. Wenn ≥ -> multiplizieren mit -1
-	- $5x_1 + 5x_2 ≥ 2$
-	- $-5x_1 - 5x_2 ≤ -2$
-- Falls eine Restriktion ein = hat -> durch zwei Ungleichungen ersetzen
-	- aus $2x_1 - 3x_2 = 4$ wird:
-	- $2x_1 - 3x_2 ≤ 4$
-	- $2x_1 - 3x_2 ≥ 4$ -> $-2x_1 + 3x_2 ≤ -4$
+1. Die Strukturvariablen müssen linear sein --> "lineare Programmierung"
+2. Die Grundform gilt nur für Maximierungen, nicht für Minimierungen
+3. Restriktionen sind immer kleiner-gleich (≤)
+
+## Umformung in die Grundform
+1. Wenn "größer-gleich" (≥), dann mit -1 multiplizieren (Multiplikation mit -1 dreht die Vorzeichen und die Bedingung)  
+Beispiel:  
+$5x_1 + 5x_2 ≥ 2$  
+$-5x_1 - 5x_2 ≤ -2$  
+2. Falls eine Restriktion ein "gleich" nutzt, kann dies durch zwei Ungleichungen ersetzt werden:
+	1. aus $2x_1 - 3x_2 = 4$ wird:
+	2. $2x_1 - 3x_2 ≤ 4$
+	3. $2x_1 - 3x_2 ≥ 4$  
+	Nach Regel 1 wird daraus: $-2x_1 + 3x_2 ≤ -4$
+3. Streichen der Schlupfvariablen
