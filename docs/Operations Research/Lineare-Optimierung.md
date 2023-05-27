@@ -13,18 +13,18 @@ Ein Metzger stellt sein Hackfleisch gemischt aus Schweinefleisch und Rinderfleis
 - Der Metzger garantiert einen Fettanteil von höchstens 25%
 - Mit welchem Mischungsverhältnis kann der Metzger sein Hackfleisch zu minimalen Kosten herstellen?
 
-$x$ = Gewicht Rindfleisch in kg
+$x$ = Gewicht Rindfleisch in kg  
 $y$ = Gewicht Schweinefleisch in kg
 
 ### Formel zur Preisberechnung:
 Der Preis eines Kilogramms Hackfleich lässt sich wie folgt berechnen: $z = 2,35 x + 2,05y$
 
 ## Restriktionen
-1. Das Hackfleisch soll höchstens 25% Fett haben:
+1. Das Hackfleisch soll höchstens 25% Fett haben:  
    $0,2x + 0,32y ≤ 0,25$ --> grüner Bereich
-2. Die Mengen von Rind- und Schweinefleisch sollen zusammen 1kg ergeben
+2. Die Mengen von Rind- und Schweinefleisch sollen zusammen 1kg ergeben  
    $x+y = 1$ --> blaue Gerade
-3. Die Gewichte sind nicht-negative reelle Zahlen
+3. Die Gewichte sind nicht-negative reelle Zahlen  
    $x ≥ 0$, $y ≥ 0$ --> Quadrant im Koordinatensystem
 
 ## Grafische Darstellung Fettanteil und Gewicht
