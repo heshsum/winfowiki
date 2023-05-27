@@ -65,25 +65,25 @@ $$
 
 
 ### Berechnung 2. Restriktion - 1 kg
-- Wenn $x = 0$ --> $y = 1$
+- Wenn $x = 0$ --> $y = 1$  
 - Wenn $x = 1$ --> $y = 0$
 
 Formel für die Gerade: $f(x) = -1 x + 1$
 
 ### 3. Kostenoptimierung
-1. Formel zur Preisberechnung:  $z = 2,35x + 2,05y$
-2. nach $y$ auflösen:
-   $z = 2,35x + 2,05y | -2,35x$
-   $2,05y = -2,35x + z | ∶ 2,05$
+1. Formel zur Preisberechnung:  $z = 2,35x + 2,05y$  
+2. nach $y$ auflösen:  
+   $z = 2,35x + 2,05y | -2,35x$  
+   $2,05y = -2,35x + z | ∶ 2,05$  
    $y = -\frac{2,35}{2,05} x + \frac{z}{2,05}$
 
 Eine Gerade mit der Steigung $-\frac{2,35}{2,05}$ ergibt an ihrem Schnittpunkt mit der Geraden für die Restriktion des Gewichtes und der Fläche für die Restriktion des Fettanteils den optimalen Wert:
 
 ![](img/Grafische-Darstellung-Optimierung.png)
 
-Optimaler Wert für x: $\frac{7}{12}$
+Optimaler Wert für x: $\frac{7}{12}$  
 Optimaler Wert für y: $\frac{5}{12}$
 
 Die optimalen Kosten:
-$z = 2,35 ⋅ \frac{7}{12} + 2,05 ⋅ \frac{5}{12}$
+$z = 2,35 ⋅ \frac{7}{12} + 2,05 ⋅ \frac{5}{12}$  
 $z = 2,22$
