@@ -42,6 +42,7 @@ Die Normalform ist eine Darstellungsweise einer Linearen Programmierung.
 $$
 a_{m1}x_1 + a_{m2}x_2 +...+ a_{mn}x_n = b_m
 $$
+ 
 $$
 x_1, x_2,...,y_1,...,y_n ≥ 0
 $$
