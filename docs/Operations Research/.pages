@@ -2,4 +2,7 @@ nav:
     - Begriffe.md
     - Lineare-Optimierung.md
     - Grafische-Lösung-Linearer-Optimierungen.md
+    - Lineare-Programmierung-Grundform.md
+    - Lineare-Programmierung-Normalform.md
+    - Simplex-Algorithmus.md
     - ...
