@@ -161,7 +161,7 @@ Die Umrechnung des Gleichungssystems erfolgt in zwei Schritten:
 
 $Z = 0 + 4(6 - \frac{1}{3}y_3 - \frac{2}{3}x_2)+3x_2$  
 (I) $y_1 = 6 - x_2$  
-(II) $y2 = 7 - (6 - \frac{1}{3}y_3 - \frac{2}{3}x_2) - x_2$  
+(II) $y_2 = 7 - (6 - \frac{1}{3}y_3 - \frac{2}{3}x_2) - x_2$  
 (III) $x_1 = 6 - \frac{1}{3}y_3 - \frac{2}{3}x_2$
 
 Vereinfacht:
