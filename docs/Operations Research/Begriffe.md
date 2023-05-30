@@ -25,10 +25,10 @@ $(R1) x_1 ≤ 12$
 Ergibt nun die optimale Lösung einen Wert von $8$ für $x_1$, so ist der Schlupf für $x_1$ gleich $3$.
 
 ## Basisvariablen
-Basisvariablen sind Variablen, die in der Zielfunktion nicht den Wert Null erhalten müssen.
+Basisvariablen sind Variablen, die nicht mit dem Wert $0$ bewertet werden.
 
 ## Nichtbasisvariablen
-Nichtbasisvariablen sind Variablen, die nicht in der Zielfunktion enthalten sind und daher den Wert Null erhalten müssen.
+Nichtbasisvariablen sind Variablen, die mit dem Wert $0$ bewertet werden.
 
 ## Grundform
 Die Grundform ist eine eine Darstellungsweise einer Linearen Programmierung.
