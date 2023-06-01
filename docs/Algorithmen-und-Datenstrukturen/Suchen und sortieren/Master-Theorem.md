@@ -53,8 +53,8 @@ dann gilt:
 $$
 T(n) =
     \begin{cases}
-	Θ(n^{log_b a}) && \text{, wenn } f(n) ∈ O(n^{log_b a - ∈}) \\
-	Θ(n^{log_b a} log_2 n) && \text{, wenn } f(n) ∈ Θ(n^{log_b a}) \\
+	Θ(n^{log_b a}) && \text{, wenn } f(n) ∈ O(n^{log_b a - ∈})  \\
+	Θ(n^{log_b a} log_2 n) && \text{, wenn } f(n) ∈ Θ(n^{log_b a})  \\
 	Θ(f(n)) && \text{, wenn } f(n) ∈ Ω(n^{log_b a + ∈}) \text{ und } && \\  &&  a\ f(n/b) <= c\ f(n)  \text{ und genügend großes } n\\
     \end{cases}       
 $$
