@@ -7,7 +7,7 @@ $$
 Ax=b
 $$
 
-- $A$ ist dabei eine $m x (n+m)$ Matrix  
+- $A$ ist dabei eine $m ⨯ (n+m)$ Matrix  
 - $x$ ist ein $(n + m)$-dimensionaler Vektor  
 - b ist ein $m$-dimensionaler Vektor
 
@@ -18,7 +18,7 @@ $$
 A^{(0)}x^{(0)}=b
 $$
 
-- $A$ ist eine $m x m$ Matrix
+- $A$ ist eine $m ⨯ m$ Matrix
 - $x$ ist ein $m$-dimensionaler Vektor
 
 **Soweit $A^{(0)}$ eine *singuläre* Matrix ist, hat die neue Gleichung eine eindeutige Lösung.**
