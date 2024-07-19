@@ -1,0 +1,1266 @@
+
+<!DOCTYPE html>
+
+<html class="no-js" lang="de">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<link href="../Sequentielle-Listen/" rel="prev"/>
+<link href="../../Suchen%20und%20sortieren/Master-Theorem/" rel="next"/>
+<link href="../../../assets/images/favicon.png" rel="icon"/>
+<meta content="mkdocs-1.6.0, mkdocs-material-9.5.29" name="generator"/>
+<title>Verkettete Listen - WinfoWiki</title>
+<link href="../../../assets/stylesheets/main.76a95c52.min.css" rel="stylesheet"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
+<style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+<script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+</head>
+<body dir="ltr">
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#verkettete-listen">
+          Zum Inhalt
+        </a>
+</div>
+<div data-md-component="announce">
+</div>
+<header class="md-header md-header--shadow" data-md-component="header">
+<nav aria-label="Kopfzeile" class="md-header__inner md-grid">
+<a aria-label="WinfoWiki" class="md-header__button md-logo" data-md-component="logo" href="../../.." title="WinfoWiki">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"></path></svg>
+</a>
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"></path></svg>
+</label>
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis">
+            WinfoWiki
+          </span>
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">
+            
+              Verkettete Listen
+            
+          </span>
+</div>
+</div>
+</div>
+<script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+<label class="md-header__button md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"></path></svg>
+</label>
+<div class="md-search" data-md-component="search" role="dialog">
+<label class="md-search__overlay" for="__search"></label>
+<div class="md-search__inner" role="search">
+<form class="md-search__form" name="search">
+<input aria-label="Suche" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" name="query" placeholder="Suche" required="" spellcheck="false" type="text"/>
+<label class="md-search__icon md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"></path></svg>
+</label>
+<nav aria-label="Suche" class="md-search__options">
+<button aria-label="Zurücksetzen" class="md-search__icon md-icon" tabindex="-1" title="Zurücksetzen" type="reset">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"></path></svg>
+</button>
+</nav>
+</form>
+<div class="md-search__output">
+<div class="md-search__scrollwrap" data-md-scrollfix="" tabindex="0">
+<div class="md-search-result" data-md-component="search-result">
+<div class="md-search-result__meta">
+            Suche wird initialisiert
+          </div>
+<ol class="md-search-result__list" role="presentation"></ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="md-header__source">
+<a class="md-source" data-md-component="source" href="https://github.com/heshsum/winfowiki" title="Zum Repository">
+<div class="md-source__icon md-icon">
+<svg viewbox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"></path></svg>
+</div>
+<div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+</div>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Navigation" class="md-nav md-nav--primary" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="WinfoWiki" class="md-nav__button md-logo" data-md-component="logo" href="../../.." title="WinfoWiki">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"></path></svg>
+</a>
+    WinfoWiki
+  </label>
+<div class="md-nav__source">
+<a class="md-source" data-md-component="source" href="https://github.com/heshsum/winfowiki" title="Zum Repository">
+<div class="md-source__icon md-icon">
+<svg viewbox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"></path></svg>
+</div>
+<div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+</div>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../..">
+<span class="md-ellipsis">
+    Willkommen im WinfoWiki
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+<span class="md-ellipsis">
+    Algorithmen und Datenstrukturen
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="true" aria-labelledby="__nav_2_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_2">
+<span class="md-nav__icon md-icon"></span>
+            Algorithmen und Datenstrukturen
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../">
+<span class="md-ellipsis">
+    Algorithmen und Datenstrukturen
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_2_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+<span class="md-ellipsis">
+    O Notation und Laufzeitanalyse
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_2_2_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_2_2">
+<span class="md-nav__icon md-icon"></span>
+            O Notation und Laufzeitanalyse
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../O-Notation-und-Laufzeitanalyse/Laufzeitanalyse-Grundlagen/">
+<span class="md-ellipsis">
+    Laufzeitanalyse Grundlagen
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../O-Notation-und-Laufzeitanalyse/O-Notation/">
+<span class="md-ellipsis">
+    O-Notation - Worst-Case-Laufzeit
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../O-Notation-und-Laufzeitanalyse/Theta-Notation/">
+<span class="md-ellipsis">
+    Theta-Notation - Average-Case-Laufzeit
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../O-Notation-und-Laufzeitanalyse/Omega-Notation/">
+<span class="md-ellipsis">
+    Omega-Notation - Best-Case-Laufzeit
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_2_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+<span class="md-ellipsis">
+    Listen und Mengen
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="true" aria-labelledby="__nav_2_3_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_2_3">
+<span class="md-nav__icon md-icon"></span>
+            Listen und Mengen
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Listen-und-Mengen/">
+<span class="md-ellipsis">
+    Listen und Mengen - abstrakter Datentyp
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Sequentielle-Listen/">
+<span class="md-ellipsis">
+    Sequentielle Liste
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+<span class="md-ellipsis">
+    Verkettete Listen
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
+<span class="md-ellipsis">
+    Verkettete Listen
+  </span>
+</a>
+<nav aria-label="Inhaltsverzeichnis" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Inhaltsverzeichnis
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#einfugen">
+<span class="md-ellipsis">
+      Einfügen
+    </span>
+</a>
+<nav aria-label="Einfügen" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#einfugen-am-anfang-einer-verketteten-liste">
+<span class="md-ellipsis">
+      Einfügen am Anfang einer verketteten Liste
+    </span>
+</a>
+<nav aria-label="Einfügen am Anfang einer verketteten Liste" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#ausgangslage">
+<span class="md-ellipsis">
+      Ausgangslage
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#ergebnis">
+<span class="md-ellipsis">
+      Ergebnis
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#operationen">
+<span class="md-ellipsis">
+      Operationen
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#zeitaufwand">
+<span class="md-ellipsis">
+      Zeitaufwand
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#einfugen-an-bestimmter-position-einer-verketteten-liste-index-des-vorgangers-bekannt">
+<span class="md-ellipsis">
+      Einfügen an bestimmter Position einer verketteten Liste (Index des Vorgängers bekannt)
+    </span>
+</a>
+<nav aria-label="Einfügen an bestimmter Position einer verketteten Liste (Index des Vorgängers bekannt)" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#ausgangslage_1">
+<span class="md-ellipsis">
+      Ausgangslage
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#ergebnis_1">
+<span class="md-ellipsis">
+      Ergebnis
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#operationen_1">
+<span class="md-ellipsis">
+      Operationen
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#zeitaufwand_1">
+<span class="md-ellipsis">
+      Zeitaufwand
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#einfugen-an-bestimmter-position-einer-verketteten-liste-referenz-des-vorgangers-unbekannt">
+<span class="md-ellipsis">
+      Einfügen an bestimmter Position einer verketteten Liste (Referenz des Vorgängers unbekannt)
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#entfernen">
+<span class="md-ellipsis">
+      Entfernen
+    </span>
+</a>
+<nav aria-label="Entfernen" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#entfernen-vom-anfang-einer-verketteten-liste">
+<span class="md-ellipsis">
+      Entfernen vom Anfang einer verketteten Liste
+    </span>
+</a>
+<nav aria-label="Entfernen vom Anfang einer verketteten Liste" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#ausgangslage_2">
+<span class="md-ellipsis">
+      Ausgangslage
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#ergebnis_2">
+<span class="md-ellipsis">
+      Ergebnis
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#operationen_2">
+<span class="md-ellipsis">
+      Operationen
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#zeitaufwand_2">
+<span class="md-ellipsis">
+      Zeitaufwand
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#entfernen-von-bestimmter-position-einer-verketteten-liste">
+<span class="md-ellipsis">
+      Entfernen von bestimmter Position einer verketteten Liste
+    </span>
+</a>
+<nav aria-label="Entfernen von bestimmter Position einer verketteten Liste" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#ausgangslage_3">
+<span class="md-ellipsis">
+      Ausgangslage
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#ergebnis_3">
+<span class="md-ellipsis">
+      Ergebnis
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#operationen_3">
+<span class="md-ellipsis">
+      Operationen
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#zeitaufwand_3">
+<span class="md-ellipsis">
+      Zeitaufwand
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#suchen-in-verketteten-listen">
+<span class="md-ellipsis">
+      Suchen in verketteten Listen
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#iteration">
+<span class="md-ellipsis">
+      Iteration
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_2_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2_4" id="__nav_2_4_label" tabindex="0">
+<span class="md-ellipsis">
+    Suchen und sortieren
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_2_4_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_2_4">
+<span class="md-nav__icon md-icon"></span>
+            Suchen und sortieren
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Suchen%20und%20sortieren/Master-Theorem/">
+<span class="md-ellipsis">
+    Master-Theorem
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+<span class="md-ellipsis">
+    Betriebswirtschaftslehre
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_3_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_3">
+<span class="md-nav__icon md-icon"></span>
+            Betriebswirtschaftslehre
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Betriebswirtschaftslehre/Produktion-Beschaffung-Logistik/">
+<span class="md-ellipsis">
+    Produktion, Beschaffung und Logistik
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Betriebswirtschaftslehre/Produktions-Programm-Planung/">
+<span class="md-ellipsis">
+    Produktions-Programm-Planung
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Betriebswirtschaftslehre/Produktions-Faktor-Planung/">
+<span class="md-ellipsis">
+    Produktions-Faktor-Planung
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Betriebswirtschaftslehre/Produktions-Prozess-Planung/">
+<span class="md-ellipsis">
+    Produktions-Prozess-Planung
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+<span class="md-ellipsis">
+    Datenbanken
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_4_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_4">
+<span class="md-nav__icon md-icon"></span>
+            Datenbanken
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Datenbanken/">
+<span class="md-ellipsis">
+    Datenbanken
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Datenbanken/SQL-Grundlagen/">
+<span class="md-ellipsis">
+    SQL Grundlagen
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_4_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_4_3" id="__nav_4_3_label" tabindex="0">
+<span class="md-ellipsis">
+    Normalformen
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_4_3_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_4_3">
+<span class="md-nav__icon md-icon"></span>
+            Normalformen
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Datenbanken/Normalformen/Normalformen/">
+<span class="md-ellipsis">
+    Normalformen
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Datenbanken/Normalformen/Funktionale-Abh%C3%A4ngigkeit/">
+<span class="md-ellipsis">
+    Funktionale Abhängigkeit
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_5" type="checkbox"/>
+<label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+<span class="md-ellipsis">
+    Grundlagen der Programmierung
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_5_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_5">
+<span class="md-nav__icon md-icon"></span>
+            Grundlagen der Programmierung
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Grundlagen_der_Programmierung/">
+<span class="md-ellipsis">
+    Grundlagen der Programmierung
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Grundlagen_der_Programmierung/Setup/">
+<span class="md-ellipsis">
+    Setup
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Grundlagen_der_Programmierung/Methoden/">
+<span class="md-ellipsis">
+    Methoden
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Grundlagen_der_Programmierung/Schleifen/">
+<span class="md-ellipsis">
+    Schleifen und Anweisungen
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_6" type="checkbox"/>
+<label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+<span class="md-ellipsis">
+    Informationsmanagement
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_6_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_6">
+<span class="md-nav__icon md-icon"></span>
+            Informationsmanagement
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Informationsmanagement/">
+<span class="md-ellipsis">
+    Informationsmanagement
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_6_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_6_2" id="__nav_6_2_label" tabindex="0">
+<span class="md-ellipsis">
+    Grundlagen der Informationswissenschaft
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_6_2_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_6_2">
+<span class="md-nav__icon md-icon"></span>
+            Grundlagen der Informationswissenschaft
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Informationsmanagement/Grundlagen-der-Informationswissenschaft/332_Informationen-als-Produktionsfaktor/">
+<span class="md-ellipsis">
+    Informationen als Produktionsfaktor
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Informationsmanagement/Grundlagen-der-Informationswissenschaft/33_Betriebliche-Informationssysteme/">
+<span class="md-ellipsis">
+    Betriebliche Informations- und Kommunikationssysteme
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_6_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_6_3" id="__nav_6_3_label" tabindex="0">
+<span class="md-ellipsis">
+    Theoretische Grundlagen des Informationsmanagements
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_6_3_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_6_3">
+<span class="md-nav__icon md-icon"></span>
+            Theoretische Grundlagen des Informationsmanagements
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Informationsmanagement/Theoretische-Grundlagen-des-Informationsmanagements/Begriffsdefinitionen/">
+<span class="md-ellipsis">
+    Begriffsdefinitionen
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Informationsmanagement/Theoretische-Grundlagen-des-Informationsmanagements/Sichtweisen-auf-Informationen/">
+<span class="md-ellipsis">
+    Sichtweisen auf Informationssysteme
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Informationsmanagement/Theoretische-Grundlagen-des-Informationsmanagements/Architektur-von-Informationssystemen/">
+<span class="md-ellipsis">
+    Architektur von Informationssystemen
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Informationsmanagement/Theoretische-Grundlagen-des-Informationsmanagements/Abgrenzung-zum-Wissensmanagement/">
+<span class="md-ellipsis">
+    Abgrenzung zum Wissensmanagement
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Informationsmanagement/Theoretische-Grundlagen-des-Informationsmanagements/TOQ-Modell/">
+<span class="md-ellipsis">
+    TOQ-Modell
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_6_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_6_4" id="__nav_6_4_label" tabindex="0">
+<span class="md-ellipsis">
+    Informationsmanagement in Organisationen
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_6_4_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_6_4">
+<span class="md-nav__icon md-icon"></span>
+            Informationsmanagement in Organisationen
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Informationsmanagement/Informationsmanagement-in-Organisationen/Anforderungen-an-unternehmerisches-Informationsmanagement/">
+<span class="md-ellipsis">
+    Anforderungen an unternehmerisches Informationsmanagement
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Informationsmanagement/Informationsmanagement-in-Organisationen/Gegenstand-des-Informationsmanagements/">
+<span class="md-ellipsis">
+    Gegenstand des Informationsmanagements
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Informationsmanagement/Informationsmanagement-in-Organisationen/Stakeholder/">
+<span class="md-ellipsis">
+    Stakeholder
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Informationsmanagement/Informationsmanagement-in-Organisationen/Informationsorientierung/">
+<span class="md-ellipsis">
+    Informationsorientierung
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Informationsmanagement/Informationsmanagement-in-Organisationen/Aufgaben-des-CIO/">
+<span class="md-ellipsis">
+    Aufgaben des Chief Information Officer (CIO)
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_6_5" type="checkbox"/>
+<label class="md-nav__link" for="__nav_6_5" id="__nav_6_5_label" tabindex="0">
+<span class="md-ellipsis">
+    Aufgabenebenen des Informationsmanagements
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_6_5_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_6_5">
+<span class="md-nav__icon md-icon"></span>
+            Aufgabenebenen des Informationsmanagements
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Informationsmanagement/Aufgabenebenen-des-Informationsmanagements/Primaeraufgaben/">
+<span class="md-ellipsis">
+    Primäraufgaben des Informationsmanagements
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Informationsmanagement/Aufgabenebenen-des-Informationsmanagements/Sekundaeraufgaben/">
+<span class="md-ellipsis">
+    Sekundäraufgaben von Informationssystemen
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Informationsmanagement/Aufgabenebenen-des-Informationsmanagements/Strategische-Aufgaben/">
+<span class="md-ellipsis">
+    Strategisch-konzeptionelle Aufgaben
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../downloads/">
+<span class="md-ellipsis">
+    Downloads
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Inhaltsverzeichnis" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Inhaltsverzeichnis
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#einfugen">
+<span class="md-ellipsis">
+      Einfügen
+    </span>
+</a>
+<nav aria-label="Einfügen" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#einfugen-am-anfang-einer-verketteten-liste">
+<span class="md-ellipsis">
+      Einfügen am Anfang einer verketteten Liste
+    </span>
+</a>
+<nav aria-label="Einfügen am Anfang einer verketteten Liste" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#ausgangslage">
+<span class="md-ellipsis">
+      Ausgangslage
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#ergebnis">
+<span class="md-ellipsis">
+      Ergebnis
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#operationen">
+<span class="md-ellipsis">
+      Operationen
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#zeitaufwand">
+<span class="md-ellipsis">
+      Zeitaufwand
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#einfugen-an-bestimmter-position-einer-verketteten-liste-index-des-vorgangers-bekannt">
+<span class="md-ellipsis">
+      Einfügen an bestimmter Position einer verketteten Liste (Index des Vorgängers bekannt)
+    </span>
+</a>
+<nav aria-label="Einfügen an bestimmter Position einer verketteten Liste (Index des Vorgängers bekannt)" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#ausgangslage_1">
+<span class="md-ellipsis">
+      Ausgangslage
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#ergebnis_1">
+<span class="md-ellipsis">
+      Ergebnis
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#operationen_1">
+<span class="md-ellipsis">
+      Operationen
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#zeitaufwand_1">
+<span class="md-ellipsis">
+      Zeitaufwand
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#einfugen-an-bestimmter-position-einer-verketteten-liste-referenz-des-vorgangers-unbekannt">
+<span class="md-ellipsis">
+      Einfügen an bestimmter Position einer verketteten Liste (Referenz des Vorgängers unbekannt)
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#entfernen">
+<span class="md-ellipsis">
+      Entfernen
+    </span>
+</a>
+<nav aria-label="Entfernen" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#entfernen-vom-anfang-einer-verketteten-liste">
+<span class="md-ellipsis">
+      Entfernen vom Anfang einer verketteten Liste
+    </span>
+</a>
+<nav aria-label="Entfernen vom Anfang einer verketteten Liste" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#ausgangslage_2">
+<span class="md-ellipsis">
+      Ausgangslage
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#ergebnis_2">
+<span class="md-ellipsis">
+      Ergebnis
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#operationen_2">
+<span class="md-ellipsis">
+      Operationen
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#zeitaufwand_2">
+<span class="md-ellipsis">
+      Zeitaufwand
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#entfernen-von-bestimmter-position-einer-verketteten-liste">
+<span class="md-ellipsis">
+      Entfernen von bestimmter Position einer verketteten Liste
+    </span>
+</a>
+<nav aria-label="Entfernen von bestimmter Position einer verketteten Liste" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#ausgangslage_3">
+<span class="md-ellipsis">
+      Ausgangslage
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#ergebnis_3">
+<span class="md-ellipsis">
+      Ergebnis
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#operationen_3">
+<span class="md-ellipsis">
+      Operationen
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#zeitaufwand_3">
+<span class="md-ellipsis">
+      Zeitaufwand
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#suchen-in-verketteten-listen">
+<span class="md-ellipsis">
+      Suchen in verketteten Listen
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#iteration">
+<span class="md-ellipsis">
+      Iteration
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content" data-md-component="content">
+<article class="md-content__inner md-typeset">
+<h1 id="verkettete-listen">Verkettete Listen<a class="headerlink" href="#verkettete-listen" title="Permanent link">#</a></h1>
+<p>Sequentielle Listen haben den Nachteil, dass sie eine festgelegte Größe haben, die nicht verändert werden kann (siehe auch <a href="../Sequentielle-Listen/">Sequentielle Listen</a>).</p>
+<p>Bei verketteten Listen wird zusätzlich in Form einer Referenz (Adresse) gespeichert, an welcher Stelle sich das nächste Element befindet. Somit können die Element beliebig über den Speicher verstreut liegen (während bei einem Array ein zusammenhängender Speicherbereich verwendet wird).</p>
+<p>Nachteil: es wird mehr Speicher benötigt</p>
+<p>Der Beginn einer Liste wird durch eine Referenz (<code>head</code>) auf das erste Element dargestellt. Häufig gibt es auch eine Referenz auf das Ende der Liste (<code>tail</code>).</p>
+<pre class="mermaid"><code>flowchart LR
+    a("i1 (head)")
+    b(i2)
+    c(i3)
+    d("i4 (tail)")
+    e(null)
+    a --&gt; b
+    b --&gt; c
+    c --&gt; d
+    d --&gt; e</code></pre>
+<p>Jedes Element beinhaltet den eigenen Wert und die Referenz zum nächsten Element.  </p>
+<blockquote>
+<p>Verkettete Listen sind <strong><em>rekursive Datenstrukturen</em></strong>, da man bei der Definition eines Elements dieser Datenstruktur den Verweis auf das nächste Element benötigt.  </p>
+</blockquote>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="kd">class</span> <span class="nc">ListElement</span><span class="o">&lt;</span><span class="n">type</span><span class="o">&gt;</span><span class="w"> </span><span class="p">{</span>
+<a href="#__codelineno-0-2" id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">type</span><span class="w"> </span><span class="n">value</span><span class="p">;</span>
+<a href="#__codelineno-0-3" id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">ListElement</span><span class="o">&lt;</span><span class="n">type</span><span class="o">&gt;</span><span class="w"> </span><span class="n">next</span><span class="p">;</span>
+<a href="#__codelineno-0-4" id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="p">}</span>
+</code></pre></div>
+<p>Häufig sind auch doppelt verkettete Listen anzutreffen, bei denen jedes Element die Referenzen zum Nachfolger und Vorgänger beinhalten.</p>
+<h2 id="einfugen">Einfügen<a class="headerlink" href="#einfugen" title="Permanent link">#</a></h2>
+<h3 id="einfugen-am-anfang-einer-verketteten-liste">Einfügen am Anfang einer verketteten Liste<a class="headerlink" href="#einfugen-am-anfang-einer-verketteten-liste" title="Permanent link">#</a></h3>
+<h4 id="ausgangslage">Ausgangslage<a class="headerlink" href="#ausgangslage" title="Permanent link">#</a></h4>
+<pre class="mermaid"><code>flowchart LR
+    a("i1 (head)")
+    b(i2)
+    c(i3)
+    d("i4 (tail)")
+    e(null)
+    a --&gt; c
+    c --&gt; d
+    d --&gt; e</code></pre>
+<h4 id="ergebnis">Ergebnis<a class="headerlink" href="#ergebnis" title="Permanent link">#</a></h4>
+<pre class="mermaid"><code>flowchart LR
+    a("i1")
+    b("i2 (head)")
+    c(i3)
+    d("i4 (tail)")
+    e(null)
+    b --&gt; a
+    a --&gt; c
+    c --&gt; d
+    d --&gt; e</code></pre>
+<h4 id="operationen">Operationen<a class="headerlink" href="#operationen" title="Permanent link">#</a></h4>
+<ul>
+<li>Element wird eingefügt mit Referenz auf das nächste Element (hier: <code>i1</code>)</li>
+<li><code>head</code> Referenz wird angepasst</li>
+</ul>
+<h4 id="zeitaufwand">Zeitaufwand<a class="headerlink" href="#zeitaufwand" title="Permanent link">#</a></h4>
+<p>Beide Schritte sind mit konstantem Zeitaufwand möglich. Daher ergibt sich folgender Aufwand:  </p>
+<p>Worst-case/best-case: <span class="arithmatex">\(O(1)\)</span></p>
+<h3 id="einfugen-an-bestimmter-position-einer-verketteten-liste-index-des-vorgangers-bekannt">Einfügen an bestimmter Position einer verketteten Liste (Index des Vorgängers bekannt)<a class="headerlink" href="#einfugen-an-bestimmter-position-einer-verketteten-liste-index-des-vorgangers-bekannt" title="Permanent link">#</a></h3>
+<p>Weiter wird angenommen, dass das neue Vorgängerlement anhand einer Referenz bekannt ist.</p>
+<h4 id="ausgangslage_1">Ausgangslage<a class="headerlink" href="#ausgangslage_1" title="Permanent link">#</a></h4>
+<pre class="mermaid"><code>flowchart LR
+    a("i1 (head)")
+    b(i2)
+    c(i3)
+    d("i4 (tail)")
+    e(null)
+    a --&gt; b
+    b --&gt; d
+    d --&gt; e</code></pre>
+<h4 id="ergebnis_1">Ergebnis<a class="headerlink" href="#ergebnis_1" title="Permanent link">#</a></h4>
+<pre class="mermaid"><code>flowchart LR
+    a("i1 (head)")
+    b(i2)
+    c(i3)
+    d("i4 (tail)")
+    e(null)
+    a --&gt; b
+    b --&gt; c
+    c --&gt; d
+    d --&gt; e</code></pre>
+<h4 id="operationen_1">Operationen<a class="headerlink" href="#operationen_1" title="Permanent link">#</a></h4>
+<ul>
+<li>Element wird eingefügt mit Referenz auf das nächste Element (hier: <code>i4</code>)</li>
+<li>Referenz des Vorgängerelements (<code>i2</code>) wird angepasst (hier: von <code>i4</code> auf <code>i3</code>).</li>
+</ul>
+<h4 id="zeitaufwand_1">Zeitaufwand<a class="headerlink" href="#zeitaufwand_1" title="Permanent link">#</a></h4>
+<p>Beide Schritte sind mit konstantem Zeitaufwand möglich. Daher ergibt sich foglender Aufwand:</p>
+<p>Worst-case/best-case: <span class="arithmatex">\(O(1)\)</span></p>
+<h2 id="einfugen-an-bestimmter-position-einer-verketteten-liste-referenz-des-vorgangers-unbekannt">Einfügen an bestimmter Position einer verketteten Liste (Referenz des Vorgängers unbekannt)<a class="headerlink" href="#einfugen-an-bestimmter-position-einer-verketteten-liste-referenz-des-vorgangers-unbekannt" title="Permanent link">#</a></h2>
+<p>Ist die Referenz nicht bekannt, muss man zur Stelle navigieren.
+Zeitaufwand: siehe <a href="../Sequentielle-Listen/#suchen">Zeitaufwand Suche mit Index</a></p>
+<h2 id="entfernen">Entfernen<a class="headerlink" href="#entfernen" title="Permanent link">#</a></h2>
+<ol>
+<li>Entfernen zu Beginn der Liste<br/>
+Setze <code>head</code> (Referenz auf das erste Listnelement) auf den Nachfolger des bisherigen Listelements. Aufwand: <span class="arithmatex">\(O(1)\)</span></li>
+<li>Entfernen an bestimmter Position einer Liste<br/>
+Ist die Position des zu entfernenden Elements bekannt (in Form einer Referenz), so genügt das Ändern der Referenzen. Aufwand: <span class="arithmatex">\(O(1)\)</span></li>
+</ol>
+<h3 id="entfernen-vom-anfang-einer-verketteten-liste">Entfernen vom Anfang einer verketteten Liste<a class="headerlink" href="#entfernen-vom-anfang-einer-verketteten-liste" title="Permanent link">#</a></h3>
+<h4 id="ausgangslage_2">Ausgangslage<a class="headerlink" href="#ausgangslage_2" title="Permanent link">#</a></h4>
+<pre class="mermaid"><code>flowchart LR
+    a("i1 (head)")
+    b(i2)
+    c(i3)
+    d("i4 (tail)")
+    e(null)
+    a --&gt; b
+    b --&gt; c
+    c --&gt; d
+    d --&gt; e</code></pre>
+<h4 id="ergebnis_2">Ergebnis<a class="headerlink" href="#ergebnis_2" title="Permanent link">#</a></h4>
+<pre class="mermaid"><code>flowchart LR
+    b("i2 (head)")
+    c(i3)
+    d("i4 (tail)")
+    e(null)
+    b --&gt; c
+    c --&gt; d
+    d --&gt; e</code></pre>
+<h4 id="operationen_2">Operationen<a class="headerlink" href="#operationen_2" title="Permanent link">#</a></h4>
+<ul>
+<li>Referenz vom Vorgägnerelement auf das  Nachfolgerelement anpassen (hier: von <code>i1</code> auf <code>i2</code>).</li>
+<li>Referenz vom Element auf den Nachfolger entfernen (hier: von <code>i2</code> auf <code>null</code>)</li>
+</ul>
+<h4 id="zeitaufwand_2">Zeitaufwand<a class="headerlink" href="#zeitaufwand_2" title="Permanent link">#</a></h4>
+<p>Beides ist mit konstanter Laufzeit möglich. Daher ergibt sich folgender Zeitaufwand:  </p>
+<p>Worst-case/best-case: <span class="arithmatex">\(O(1)\)</span></p>
+<h3 id="entfernen-von-bestimmter-position-einer-verketteten-liste">Entfernen von bestimmter Position einer verketteten Liste<a class="headerlink" href="#entfernen-von-bestimmter-position-einer-verketteten-liste" title="Permanent link">#</a></h3>
+<h4 id="ausgangslage_3">Ausgangslage<a class="headerlink" href="#ausgangslage_3" title="Permanent link">#</a></h4>
+<pre class="mermaid"><code>flowchart LR
+    a("i1 (head)")
+    b(i2)
+    c(i3)
+    d("i4 (tail)")
+    e(null)
+    a --&gt; b
+    b --&gt; c
+    c --&gt; d
+    d --&gt; e</code></pre>
+<h4 id="ergebnis_3">Ergebnis<a class="headerlink" href="#ergebnis_3" title="Permanent link">#</a></h4>
+<pre class="mermaid"><code>flowchart LR
+    a("i1 (head)")
+    b(i2)
+    d("i4 (tail)")
+    e(null)
+    a --&gt; b
+    b --&gt; d
+    d --&gt; e</code></pre>
+<h4 id="operationen_3">Operationen<a class="headerlink" href="#operationen_3" title="Permanent link">#</a></h4>
+<ul>
+<li>Referenz des Vorgängers auf den Nachfolger ändern (hier: von <code>i3</code> auf <code>i4</code>)</li>
+<li>Referenz des Elements auf den Nachfolger entfernen (hier: von <code>i4</code> auf <code>null</code>)</li>
+</ul>
+<h4 id="zeitaufwand_3">Zeitaufwand<a class="headerlink" href="#zeitaufwand_3" title="Permanent link">#</a></h4>
+<p>Beide Operationen sind mit konstantem Zeitaufwand möglich. Daher ergibt sich:</p>
+<p>Worst-case/best-case:</p>
+<ul>
+<li><span class="arithmatex">\(O(1)\)</span>, wenn die Position bekannt ist</li>
+<li><span class="arithmatex">\(O(n)\)</span>, wenn nur der Index bekannt ist (da die gesamt Liste durchlaufen werden muss)</li>
+</ul>
+<h2 id="suchen-in-verketteten-listen">Suchen in verketteten Listen<a class="headerlink" href="#suchen-in-verketteten-listen" title="Permanent link">#</a></h2>
+<ol>
+<li>Position unbekannt<br/>
+Ist die Position unbekannt, muss im schlimmsten Fall die ganze Liste durchlaufen werden. Zeitaufwand: Worst-case: <span class="arithmatex">\(O(n)\)</span></li>
+<li>Position bekannt<br/>
+Ist die Indexposition bekannt, müssen alle vorherigen Elemente durchlaufen werden (da die jeweilige Referenz benötigt wird um zum nächsten Element zu navigieren). Aufwand: <span class="arithmatex">\(O(n)\)</span>.</li>
+</ol>
+<p>Bei <code>Index 0</code> ergibt sich ein Zeitaufwand von <span class="arithmatex">\(O(1)\)</span>.<br/>
+Gleichermaßen verhält es sich, wenn die Liste eine Referenz für das letzten Element (<code>tail</code>) beinhaltet und auf das letzte Element zugegriffen werden soll.</p>
+<h2 id="iteration">Iteration<a class="headerlink" href="#iteration" title="Permanent link">#</a></h2>
+<ol>
+<li>Positionierung auf Listenanfang (<code>head</code>)</li>
+<li>Navigation über Referenzen bis kein Nachfolger mehr existiert</li>
+</ol>
+<p>Zeitaufwand: <span class="arithmatex">\(O(n)\)</span></p>
+<blockquote>
+<p><strong>Achtung:</strong> man soll nicht über einen Index iterieren!
+Wird etwa eine solche Struktur genutzt:
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-1-1" id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="n">i</span><span class="w">  </span><span class="o">&lt;</span><span class="w"> </span><span class="n">x</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a href="#__codelineno-1-2" id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="w">    </span><span class="k">do</span><span class="w"> </span><span class="n">something</span><span class="p">;</span>
+<a href="#__codelineno-1-3" id="__codelineno-1-3" name="__codelineno-1-3"></a><span class="p">}</span>
+</code></pre></div>
+Dann wird für jeden Zugriff auf ein neues <code>i</code> die Liste wieder neu durchlaufen. Aufwand dann: <span class="arithmatex">\(O(n^2)\)</span>!</p>
+</blockquote>
+<h1 id="java-klasse-linkedlist">Java Klasse <code>LinkedList</code><a class="headerlink" href="#java-klasse-linkedlist" title="Permanent link">#</a></h1>
+<p>Die Java-Klasse <code>LinkedList</code> realisiert eine verkettete Liste. Sie enthält neben der Referenz auf das nächste Element auch eine Referenz auf das vorherige Element (doppelt verkettete Liste).
+Dies benötigt zwar mehr Speicherplatz, ist für viele Operationen aber schneller.</p>
+<h2 id="beispiel">Beispiel<a class="headerlink" href="#beispiel" title="Permanent link">#</a></h2>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-2-1" id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="n">LinkedList</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="w"> </span><span class="n">linkedList</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">LinkedList</span><span class="o">&lt;&gt;</span><span class="p">();</span>
+</code></pre></div>
+</article>
+</div>
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+</div>
+</main>
+<footer class="md-footer">
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" rel="noopener" target="_blank">
+      Material for MkDocs
+    </a>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.instant", "content.code.copy"], "search": "../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "In Zwischenablage kopiert", "clipboard.copy": "In Zwischenablage kopieren", "search.result.more.one": "1 weiteres Suchergebnis auf dieser Seite", "search.result.more.other": "# weitere Suchergebnisse auf dieser Seite", "search.result.none": "Keine Suchergebnisse", "search.result.one": "1 Suchergebnis", "search.result.other": "# Suchergebnisse", "search.result.placeholder": "Suchbegriff eingeben", "search.result.term.missing": "Es fehlt", "select.version": "Version ausw\u00e4hlen"}}</script>
+<script src="../../../assets/javascripts/bundle.fe8b6f2b.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<script data-app-id="1B4068BA-0CD1-4D99-9296-8D95AD4DA309" src="https://cdn.telemetrydeck.com/websdk/telemetrydeck.min.js"></script>
+</body>
+</html>
