@@ -1,0 +1,4 @@
+<script
+  src="https://cdn.telemetrydeck.com/websdk/telemetrydeck.min.js"
+  data-app-id="1B4068BA-0CD1-4D99-9296-8D95AD4DA309"
+></script>
